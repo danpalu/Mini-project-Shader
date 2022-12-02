@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toon Hatch
+  m_Name: toonhatch
   m_Shader: {fileID: 4800000, guid: 83ec0767e7ad703418cc25ca63c52e94, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
