@@ -62,7 +62,7 @@ Shader "Unlit/Toon Cell"
             float _OutlineThreshold;
 
 
-            //Hatching shading
+            //Hatching shading, rewritten/simplified from https://github.com/khalladay/PencilSketchEffect 
             float _HatchScale;
             float _HatchCutoff;
             sampler2D _Hatch0;
@@ -92,7 +92,7 @@ Shader "Unlit/Toon Cell"
                 float3 weights0 = (lightIntensity * 6.0) + float3(-0, -1, -2);
 				float3 weights1 = (lightIntensity * 6.0) + float3(-3, -4, -5);
 
-                // Subtracting so the sum of the weights does not exceed 1
+                
                 weights0.xy -= weights0.yz;
                 weights0.z -= weights1.x;
                 weights1.xy -= weights1.yz;
@@ -118,6 +118,7 @@ Shader "Unlit/Toon Cell"
                 float4 pos : SV_POSITION;
                 float3 normal : NORMAL; 
                 float3 viewDir : TEXCOORD2;
+                // Shadow stuff https://docs.unity3d.com/560/Documentation/Manual/SL-VertexFragmentShaderExamples.html
                 SHADOW_COORDS(1)
             };
 
@@ -126,10 +127,14 @@ Shader "Unlit/Toon Cell"
             Interpolators vert (meshData v)
             {
                 Interpolators o; 
+                // Transforming vertex coordinates from object to clip space for visualization
 				o.pos = UnityObjectToClipPos(v.pos);
+                // Normals transformed to world space, viewDir used later for specular lighting
                 o.normal = UnityObjectToWorldNormal(v.normal);		
 				o.viewDir = WorldSpaceViewDir(v.pos);
+                // UV's 
                 o.uv = v.uv;
+                // 
 				TRANSFER_SHADOW(o)
                 return o;
             }
@@ -157,6 +162,8 @@ Shader "Unlit/Toon Cell"
                 float4 specularColor = specularIntensitySmooth * _SpecularColor;
 
                 float4 hatch = saturate(float4(Hatching(uv * _HatchScale, lightIntensity), 1));
+
+                // Combining everything
                 float4 baseColor = _Color * (_AmbientColor + lightColor + specularColor);
                 float4 finalColor = lerp(_HatchColor, baseColor, hatch);
                 return finalColor;
