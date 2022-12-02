@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonhatch
+  m_Name: toonhatch 2
   m_Shader: {fileID: 4800000, guid: 83ec0767e7ad703418cc25ca63c52e94, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -39,16 +39,16 @@ Material:
     m_Floats:
     - _Glossiness: 48.03
     - _HatchCutoff: -3
-    - _HatchScale: 1.81
-    - _Tune1: 6.11
+    - _HatchScale: 10.8
+    - _Tune1: 7.51
     - _Tune2: 1.49
     - _Tune3: 3.36
     - _Tune4: 3.38
     - _Tune5: 3.61
     - _Tune6: 2.99
     m_Colors:
-    - _AmbientColor: {r: 0.49416864, g: 0.49416864, b: 0.49416864, a: 1}
-    - _Color: {r: 0, g: 0.21213481, b: 0.8867924, a: 1}
+    - _AmbientColor: {r: 0.25263035, g: 0.25263035, b: 0.25263035, a: 1}
+    - _Color: {r: 0.4606548, g: 0.735849, b: 0.35681736, a: 1}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
   m_BuildTextureStacks: []

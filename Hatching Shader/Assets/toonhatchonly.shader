@@ -157,7 +157,7 @@ Shader "Unlit/Toon Cell"
                 float4 specularColor = specularIntensitySmooth * _SpecularColor;
 
                 float4 hatch = saturate(float4(Hatching(uv * _HatchScale, lightIntensity), 1));
-                float4 baseColor = _Color * (_AmbientColor + lightColor + specularColor);
+                float4 baseColor = _Color * (_AmbientColor + specularColor);
                 float4 finalColor = lerp(_HatchColor, baseColor, hatch);
                 return finalColor;
 

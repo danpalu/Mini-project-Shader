@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonhatch
+  m_Name: toonhatch 3
   m_Shader: {fileID: 4800000, guid: 83ec0767e7ad703418cc25ca63c52e94, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Hatch0:
-        m_Texture: {fileID: 2800000, guid: 7513ad9e0a8536646b3ace7723cb87db, type: 3}
+        m_Texture: {fileID: 2800000, guid: f5421ba67c400554ea456fece478691a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Hatch1:
@@ -37,18 +37,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Glossiness: 48.03
-    - _HatchCutoff: -3
-    - _HatchScale: 1.81
-    - _Tune1: 6.11
-    - _Tune2: 1.49
-    - _Tune3: 3.36
-    - _Tune4: 3.38
-    - _Tune5: 3.61
-    - _Tune6: 2.99
+    - _Glossiness: 9.3
+    - _HatchCutoff: -0.75
+    - _HatchScale: 0.56
+    - _Tune1: 10
+    - _Tune2: 10
+    - _Tune3: 10
+    - _Tune4: 10
+    - _Tune5: 10
+    - _Tune6: 10
     m_Colors:
-    - _AmbientColor: {r: 0.49416864, g: 0.49416864, b: 0.49416864, a: 1}
-    - _Color: {r: 0, g: 0.21213481, b: 0.8867924, a: 1}
-    - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
+    - _AmbientColor: {r: 0.25263035, g: 0.25263035, b: 0.25263035, a: 1}
+    - _Color: {r: 0.17358488, g: 0.6504417, b: 1, a: 1}
+    - _HatchColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 1.7252309, g: 0.23246105, b: 0, a: 1}
   m_BuildTextureStacks: []
